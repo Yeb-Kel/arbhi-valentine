@@ -14,6 +14,7 @@ body{
     font-family:Arial;
     color:white;
     text-align:center;
+    overflow:hidden;
 }
 
 h1{
@@ -31,6 +32,11 @@ img{
     margin-top:30px;
     border-radius:20px;
     box-shadow:0 0 30px rgba(255,255,255,.6);
+    transition: transform 0.3s;
+}
+
+img:hover{
+    transform: scale(1.05);
 }
 
 p{
@@ -46,7 +52,34 @@ p{
 
 <p>Arbhi, scan this for your surprise…</p>
 
-<img src="images/qr.png">
+<img src="qr.png">
+
+<audio autoplay loop>
+    <source src="Afriyie_Wutah_-_Love_of_My_Life_(mp3.pm).mp3" type="audio/mpeg">
+</audio>
+
+<script>
+// Floating hearts behind the QR for magic effect
+setInterval(() => {
+    const heart = document.createElement("div");
+    heart.style.position = "absolute";
+    heart.style.fontSize = "24px";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.top = "100vh";
+    heart.innerHTML = "❤️";
+    heart.style.transition = "transform 5s linear, opacity 5s linear";
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.style.transform = "translateY(-120vh)";
+        heart.style.opacity = 0;
+    }, 50);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 5500);
+}, 300);
+</script>
 
 </body>
 </html>
