@@ -1,74 +1,70 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>For Arbhi ❤️</title>
-window.location.href = "yes.html";
+    <title>For Arbhi ❤️</title>
 
-<style>
-
-body{
-    margin:0;
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:linear-gradient(135deg,#ff9a9e,#fad0c4);
-    font-family:Arial;
-    overflow:hidden;
-}
-
-.container{
-    text-align:center;
-}
-
-h1{
-    font-size:3em;
-    color:white;
-}
-
-/* Buttons */
-
-button{
-    padding:15px 30px;
-    font-size:20px;
-    border:none;
-    border-radius:12px;
-    margin:10px;
-    cursor:pointer;
-    transition:0.3s;
-}
-
-#yes{
-    background:#ff4d6d;
-    color:white;
-}
-
-#no{
-    background:#555;
-    color:white;
-    position:absolute;
-}
-
-/* Floating hearts */
-
-.heart{
-    position:absolute;
-    font-size:24px;
-    animation:float 6s linear infinite;
-}
-
-@keyframes float{
-    from{
-        transform:translateY(100vh);
-        opacity:1;
+    <style>
+    body{
+        margin:0;
+        height:100vh;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+        font-family:Arial;
+        overflow:hidden;
     }
-    to{
-        transform:translateY(-10vh);
-        opacity:0;
-    }
-}
 
-</style>
+    .container{
+        text-align:center;
+    }
+
+    h1{
+        font-size:3em;
+        color:white;
+    }
+
+    /* Buttons */
+    button{
+        padding:15px 30px;
+        font-size:20px;
+        border:none;
+        border-radius:12px;
+        margin:10px;
+        cursor:pointer;
+        transition:0.3s;
+    }
+
+    #yes{
+        background:#ff4d6d;
+        color:white;
+    }
+
+    #no{
+        background:#555;
+        color:white;
+        position:absolute;
+    }
+
+    /* Floating hearts */
+    .heart{
+        position:absolute;
+        font-size:24px;
+        animation:float 6s linear infinite;
+    }
+
+    @keyframes float{
+        from{
+            transform:translateY(100vh);
+            opacity:1;
+        }
+        to{
+            transform:translateY(-10vh);
+            opacity:0;
+        }
+    }
+
+    </style>
 </head>
 
 <body>
@@ -85,13 +81,11 @@ button{
 </audio>
 
 <script>
-
 let noSize = 20;
 let yesSize = 20;
 
 // Move NO + shrink it
 function moveNo(){
-
     const noBtn = document.getElementById('no');
     const yesBtn = document.getElementById('yes');
 
@@ -111,15 +105,13 @@ function moveNo(){
     yesBtn.style.fontSize = yesSize + "px";
 }
 
-// YES opens love page
+// YES opens the love page
 function sayYes(){
-    window.location.href = "love.html";
+    window.location.href = "yes.html";  // Correct placement
 }
-
 
 // Floating hearts generator
 setInterval(() => {
-
     const heart = document.createElement("div");
     heart.classList.add("heart");
     heart.innerHTML = "❤️";
@@ -131,9 +123,7 @@ setInterval(() => {
     setTimeout(()=>{
         heart.remove();
     },6000)
-
 },300);
-
 </script>
 
 </body>
